@@ -17,7 +17,7 @@ var ground
 
 var width = 600
 
-var particles
+var particles = []
 
 
 
@@ -37,20 +37,20 @@ function setup(){
 
     for(var x = 40; x <=460 - 10; x=x+50)
     {
-        plinkos.push(new Plinko(x,310,15))
+        plinkos.push(new Plinko(x,310))
     }
 
     for(var x = 15; x <=510 - 10; x=x+50)
     {
-        plinkos.push(new Plinko(x,350,15))
+        plinkos.push(new Plinko(x,350))
     }
     for(var x = 40; x<=460 - 10; x=x+50)
     {
-        plinkos.push(new Plinko(x,390,15))
+        plinkos.push(new Plinko(x,390))
     }
     for(var x = 15; x<=510 - 10; x=x + 50)
     {
-        plinkos.push(new Plinko(x,430,15))
+        plinkos.push(new Plinko(x,430))
     }
 
 
@@ -96,6 +96,10 @@ function spawnParticle()
         {
             console.log("This button is preesed")
             particles.push(new Particle(random(width/2 - 10,width/2 + 10), 10,10));
+        }
+        for(var j = 0; j<particles.length; j++)
+        {
+            particles[j].display();
         }
 
 }
