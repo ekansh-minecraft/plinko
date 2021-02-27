@@ -29,11 +29,47 @@ function setup(){
     createCanvas(600,800);
     engine = Engine.create();
     world = engine.world;
+
+   
+
     
-    for(var k = 50; k <500; k = k + 50)
+    for(var k = 15; k <510 - 10; k = k + 50)
     {
         divisions.push(new Division(k, 800-divisionHeight/2, 10, divisionHeight));
     } 
+
+
+
+
+    for(var x = 40; x<= 460 - 10; x=x+50)
+    {
+        plinkos.push(new Plinko(x,70))
+    }
+
+    for(var x = 15; x<= 510 - 10; x=x+50)
+    {
+        plinkos.push(new Plinko(x,110))
+    }
+
+    for(var x = 40; x<=460 - 10; x=x+50)
+    {
+        plinkos.push(new Plinko(x,150))
+    }
+
+    for(var x = 15; x<= 510 - 10; x=x+50)
+    {
+        plinkos.push(new Plinko(x,190))
+    }
+
+    for(var x = 40; x<=460 - 10; x=x+50)
+    {
+        plinkos.push(new Plinko(x,230))
+    }
+
+    for(var x = 15; x <=510 - 10; x=x+50)
+    {
+        plinkos.push(new Plinko(x,270))
+    }
 
     for(var x = 40; x <=460 - 10; x=x+50)
     {
@@ -54,7 +90,8 @@ function setup(){
     }
 
 
-    ground = new Ground(250,795,410,10)
+
+    ground = new Ground(234,795,450,10)
 }
 
 function draw(){
@@ -62,6 +99,7 @@ function draw(){
     background("black") 
 
     ground.display()
+    
                
     for(var k=0; k<divisions.length; k++) {
         divisions[k].display()
@@ -83,6 +121,32 @@ function draw(){
     {
         plinkos[x].display()
     }
+    for(var x = 0; x<plinkos.length; x=x + 1)
+    {
+        plinkos[x].display()
+    }
+    for(var x = 0; x<plinkos.length; x=x + 1)
+    {
+        plinkos[x].display()
+    }
+    for(var x = 0; x<plinkos.length; x=x + 1)
+    {
+        plinkos[x].display()
+    }
+    for(var x = 0; x<plinkos.length; x=x + 1)
+    {
+        plinkos[x].display()
+    }
+    for(var x = 0; x<plinkos.length; x=x + 1)
+    {
+        plinkos[x].display()
+    }
+    for(var x = 0; x<plinkos.length; x=x + 1)
+    {
+        plinkos[x].display()
+    }
+
+
 
     spawnParticle()
    
